@@ -213,7 +213,7 @@ function iterate_drawDiagram(){
 
   if(primeFactors[f] < 40){
     var rFactor = iterate_draw.pointsToDrawAt[p].rFactor;
-    if(primeFactors[f] == 2){rFactor += 90;console.log('added 90')} //when the factor is a line, add 90 degrees so it's horizontal (and so that lines don't overlap with their parents)
+    if(primeFactors[f] == 2){rFactor += 90} //when the factor is a line, add 90 degrees so it's horizontal (and so that lines don't overlap with their parents)
     var allPoints = pointsOfShape(primeFactors[f], prefrad[f], iterate_draw.pointsToDrawAt[p].x, iterate_draw.pointsToDrawAt[p].y, rFactor)
     diagram_canvas.fill(prefcol[f])
     if(!preferredHiddenFactors(dnum)[f])drawShape(allPoints)
@@ -221,7 +221,7 @@ function iterate_drawDiagram(){
     diagram_canvas.fill(prefcol[f])
     if(!preferredHiddenFactors(dnum)[f])diagram_canvas.ellipse(iterate_draw.pointsToDrawAt[p].x, iterate_draw.pointsToDrawAt[p].y, prefrad[f]*2)
     var rFactor = iterate_draw.pointsToDrawAt[p].rFactor;
-    if(primeFactors[f] == 2){rFactor += 90;console.log('added 90')} //when the factor is a line, add 90 degrees so it's horizontal (and so that lines don't overlap with their parents)
+    if(primeFactors[f] == 2){rFactor += 90} //when the factor is a line, add 90 degrees so it's horizontal (and so that lines don't overlap with their parents)
 
     var allPoints = pointsOfShape(primeFactors[f], prefrad[f], iterate_draw.pointsToDrawAt[p].x, iterate_draw.pointsToDrawAt[p].y, rFactor)
   }
